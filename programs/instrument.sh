@@ -6,21 +6,18 @@ do
 #removing the trend (command:- rtr)
 #at the end we can use ppk instead of p to overall change 
 pfile=cmg3t
-#sac<<!
-#r $file
-#bd x
-#qdp off
-#p
-#transfer from polezero subtype ${pfile} to none
-#p
-#ydiv poweroff
-#xdiv poweroff
-#!
+
 sac<<!
 r $file
 bd x
 qdp off
-transfer from polezero subtype ${pfile} to none
+xdiv power off; ydiv power off
+rmean
+rtr 
+taper
+bp co 0.02 0.2
+trans from polezero subtype $b.pz to none freqlimits 0.01 0.02 0.4 0.8  
+quit
 ydiv poweroff
 xdiv poweroff
 !
@@ -33,7 +30,13 @@ sac<<!
 r $file
 bd x
 qdp off
-transfer from polezero subtype ${pfile} to none
+xdiv power off; ydiv power off
+rmean
+rtr 
+taper
+bp co 0.02 0.2
+trans from polezero subtype $b.pz to none freqlimits 0.01 0.02 0.4 0.8  
+quit
 ydiv poweroff
 xdiv poweroff
 !
