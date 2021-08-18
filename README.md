@@ -1,1 +1,1 @@
-# Anisotropy_Gujarat
+# Crustal Anisotropy
