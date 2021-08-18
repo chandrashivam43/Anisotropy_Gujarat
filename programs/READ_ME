@@ -1,0 +1,26 @@
+Running the scripts
+
+You must make a separate directory for each event which must contain the Rea files, seisan file and the scripts.
+
+running the com.sh file and time_marker.sh(for EACH stations present in the REA File) will serve the purpose.
+
+0)After running the com.sh script, click on screen to close the opened gedit file. 
+
+1) Rea file contains the time arrival of S and P phases but some stations does not have both information so we should not consider those stations because it will store random values in the header of the sac file.  
+
+2)change the Station at 3 places in time_marker.sh file marked as ##
+
+3)to run the scripts type :- bash filename or sh filename (no need to change the accesibilty(mod))
+
+4)you can change the time arrivals during the execution of the time_marker.sh script (A window will pop up automatically).
+
+5)Mark P arrival as a and S arrival as t0 .
+
+6)you can also change the arrival time of station by running the check.sh(sh check.sh) script and also you can also mark the other stations of which the information is not in the REA file particularly offline stations if the event is good.
+ 
+7)open the matlab, change the incidence angle, Vp, Vp/Vs ratio, S/N value for your concerned region and run the matlab script Anisomat_plus.m  and then type 
+anisomat_plus1_0('2012.10.17-14.58.31.C03.',[1 10],0.1) .Result window will pop up in the screen save the file as pdf.please go through for the report to know the complete functionality .
+ 
+
+*********************************MANY THANKS******************
+
